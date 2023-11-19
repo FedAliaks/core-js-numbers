@@ -283,8 +283,14 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  let temp = num;
+  let answer = 0;
+  while (temp > 0) {
+    answer += temp % 10;
+    temp = Math.floor(temp / 10);
+  }
+  return answer;
 }
 
 /**
@@ -298,8 +304,8 @@ function getSumOfDigits(/* num */) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  return Number.isInteger(Math.log2(num));
 }
 
 /**
@@ -312,8 +318,8 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
